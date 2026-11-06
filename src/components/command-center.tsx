@@ -167,6 +167,15 @@ export function CommandCenter() {
             </button>
           </div>
           <p className="mt-4 text-sm text-muted">
+            <a
+              href="https://github.com/iamtalhaarifvlogs/aidylrevised2/archive/refs/heads/main.zip"
+              className="text-brass"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download the website files
+            </a>
+            {" · "}
             <a href="/Aidyl-Systems.apk" download="Aidyl-Systems.apk" className="text-brass">Download the Android app</a>
             {" · "}
             <Link to="/training" className="text-brass">Train the agents</Link>
