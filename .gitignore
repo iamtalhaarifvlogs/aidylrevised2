@@ -1,0 +1,23 @@
+node_modules/
+.project_id
+.github_repo
+.env
+.env.*
+data/aether/
+
+# generated, caches, and binaries — not the website source
+artifacts/
+screenshots/
+attachments/
+.vercel/
+.grok/
+.tanstack/
+public/*.apk
+public/*.zip
+public/phone/
+mobile/android/app/build/
+mobile/android/app/.cxx/
+mobile/android/.gradle/
+mobile/android/build/
+mobile/android/local.properties
+*.apk

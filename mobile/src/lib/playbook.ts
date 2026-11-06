@@ -1,0 +1,51 @@
+export const PLAYBOOK: { id: string; keys: string[]; title: string; body: string; agents: ("randolph" | "maya")[] }[] = [
+  {
+    id: "qualify",
+    keys: ["qualif", "maya_qualification", "credit", "budget", "down payment"],
+    title: "Qualification",
+    agents: ["randolph", "maya"],
+    body: "A lead is ready to leave qualification when we have a name, a reachable phone, a vehicle, a budget, a down payment, and a credit read. Hot means they can move inside two weeks and the deposit path is real. If credit is only a sentence someone pasted into the field, treat it as unknown and ask again before a lender is promised.",
+  },
+  {
+    id: "deposit",
+    keys: ["deposit", "down payment", "deposit_requested", "deposit_paid"],
+    title: "Deposits",
+    agents: ["randolph", "maya"],
+    body: "Ask for the deposit only after the vehicle and the lane are named. Request it in writing, log the stage as deposit_requested, and do not book freight until the stage is deposit_paid or a rep has confirmed funds. A verbal 'approved for step 3' is not a deposit.",
+  },
+  {
+    id: "roro",
+    keys: ["roro", "container", "savannah", "baltimore", "port", "routing"],
+    title: "Routing",
+    agents: ["randolph", "maya"],
+    body: "Trucks and large SUVs for Nigeria and Ghana usually go RoRo, Savannah or Baltimore first. Sedans and overflow can go container. Match the port's RoRo flag before promising a sailing. Associate Logistics USA owns the inland leg. Carshipy owns the buyer, the deposit, and the sailing.",
+  },
+  {
+    id: "finance",
+    keys: ["interest", "lender", "financing", "apr", "credit score", "loan"],
+    title: "Financing",
+    agents: ["randolph", "maya"],
+    body: "Match the partner to the credit floor and the destination country, not the logo. Quote the rate, the term, the max loan, and the processing fee together. If min credit score is above the lead, do not send them there. Paused partners stay off new deals.",
+  },
+  {
+    id: "delay",
+    keys: ["delay", "transit", "late", "vessel", "eta"],
+    title: "Transit",
+    agents: ["randolph", "maya"],
+    body: "When a vessel slips, update estimated transit, keep the original departure, and write a workflow log on the lead. Tell the buyer the new arrival in days, not a vague 'soon'. Insurance and clearance do not change just because the ocean leg slipped.",
+  },
+  {
+    id: "handoff",
+    keys: ["rep", "handoff", "assigned"],
+    title: "Rep handoff",
+    agents: ["randolph", "maya"],
+    body: "Handoff means one named rep, a last activity timestamp, and the lead's stage moved to rep_handoff. Maya can brief the rep. Randolph only steps in if the lead crosses companies, for example a BetterDealTV inquiry that becomes a Carshipy export.",
+  },
+  {
+    id: "companies",
+    keys: ["betterdeal", "carshipy", "associate", "which company", "who handles"],
+    title: "Company split",
+    agents: ["randolph"],
+    body: "Carshipy is the export system of record and the only company on the live tables. BetterDealTV is media: YouTube, Instagram, TikTok, and the site, plus leads. Associate Logistics USA is US inland, kept on this phone. Randolph sees every company. Maya stays on Carshipy.",
+  },
+];
